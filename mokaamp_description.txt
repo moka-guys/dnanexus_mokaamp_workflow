@@ -12,8 +12,8 @@ Tags                -
 Outgoing links      -
 Created             Thu Jul 25 11:43:24 2019
 Created by          aledjones
-Last modified       Thu Jul 25 11:51:22 2019
-Edit Version        14
+Last modified       Thu Jul 25 12:00:19 2019
+Edit Version        20
 Title               MokaAMP_v1.2
 Summary             
 Output Folder       -
@@ -89,7 +89,10 @@ Input Spec          stage-FPzGj5j0jy1x97jg607Fg229:
                     [stage-FPzGjgj0jy1Q2JJF2zYx5J5k.local_realignment
                   (boolean, default=true)]
                 stage-FPzGjF00jy1VkK485zX600kx:
-                    stage-FPzGjF00jy1VkK485zX600kx.sorted_bam (file)
+                    [stage-FPzGjF00jy1VkK485zX600kx.sorted_bam (file,
+                  default={"$dnanexus_link": {"outputField":
+                  "sorted_bam", "stage":
+                  "stage-FPzGj780jy1g3p1F4F8z4J7V"}})]
                 stage-FPzGj780jy1g3p1F4F8z4J7V:
                     stage-FPzGj780jy1g3p1F4F8z4J7V.reads_fastqgz (file)
                     [stage-FPzGj780jy1g3p1F4F8z4J7V.reads2_fastqgz (file)]
