@@ -1,20 +1,20 @@
 Result 1:
-ID                  workflow-FVf1G900jy1VxG9GBJ64b24B
+ID                  workflow-FZvjPY00jy1pb2Qk5B06pb27
 Class               workflow
 Project             project-ByfFPz00jy1fk6PjpZ95F27J
 Folder              /Workflows
-Name                MokaAMP_v1.1
+Name                MokaAMP_v1.2
 State               open
 Visibility          visible
 Types               -
-Properties          github release=v1.1
+Properties          github release=v1.2
 Tags                -
 Outgoing links      -
-Created             Tue Feb 19 14:43:48 2019
+Created             Thu Jul 25 11:43:24 2019
 Created by          aledjones
-Last modified       Fri Jun  7 15:59:02 2019
-Edit Version        22
-Title               MokaAMP_v1.1
+Last modified       Thu Jul 25 12:00:19 2019
+Edit Version        20
+Title               MokaAMP_v1.2
 Summary             
 Output Folder       -
 Input Spec          stage-FPzGj5j0jy1x97jg607Fg229:
@@ -55,6 +55,10 @@ Input Spec          stage-FPzGj5j0jy1x97jg607Fg229:
                 stage-FPzGjF00jy1VkK485zX600kx: Common:
                     [stage-FPzGjF00jy1VkK485zX600kx.skip_markduplicates
                   (boolean, default=true)]
+                    [stage-FPzGjF00jy1VkK485zX600kx.skip_indelrealignment
+                  (boolean, default=false)]
+                    [stage-FPzGjF00jy1VkK485zX600kx.skip_BQSR (boolean,
+                  default=false)]
                 stage-FPzGjp80jy1V3Jvb5z6xfpfZ:
                     [stage-FPzGjp80jy1V3Jvb5z6xfpfZ.bam_file (array:file,
                   default=[{"$dnanexus_link": {"inputField":
@@ -267,7 +271,7 @@ Stage 1             stage-FPzGj5j0jy1x97jg607Fg229
 Stage 2             stage-FPzGj6Q0jy1fF6505zFP6zz5
   Executable        applet-FBPFfkj0jy1Q114YGQ0yQX8Y
 Stage 3             stage-FPzGjF00jy1VkK485zX600kx
-  Executable        applet-FPv2QY00jy1qqFF58GZ0pY01
+  Executable        applet-FZvgkjQ0jy1bZX31FxkF50QK
 Stage 4             stage-FPzGjV80jy1x97jg607Fg22b
   Executable        applet-FPv2Q1Q0jy1pBk9bG7GZ5zQp
 Stage 5             stage-FPzGjJQ0jy1fF6505zFP6zz9
@@ -282,4 +286,4 @@ Stage 9             stage-FPzGjgQ0jy1fBy972zq9f1PY
   Executable        applet-FPzGYF80jy1y01vG60K22qF0
 Stage 10            stage-FPzGjj00jy1VkK485zX600ky
   Executable        app-swiss-army-knife/2.1.3
-initializedFrom     workflow-FPzGgxj0jy1jk1Yy5z1QKpv1
+initializedFrom     workflow-FVf1G900jy1VxG9GBJ64b24B
