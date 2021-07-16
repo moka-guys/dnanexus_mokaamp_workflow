@@ -1,20 +1,20 @@
 Result 1:
-ID                  workflow-G1gV4880jy1X9jvP3kv647Yq
+ID                  workflow-G3jpGX00jy1zb80G9bzVZ6Z9
 Class               workflow
 Project             project-ByfFPz00jy1fk6PjpZ95F27J
 Folder              /Workflows
-Name                MokaAMP_v1.6
+Name                MokaAMP_v1.7
 State               open
 Visibility          visible
 Types               -
-Properties          github release=v1.6
+Properties          github release=v1.7
 Tags                -
 Outgoing links      -
-Created             Thu Apr  8 15:24:33 2021
-Created by          graemesmith3
-Last modified       Fri Apr  9 15:04:42 2021
-Edit Version        1
-Title               MokaAMP_v1.6
+Created             Fri Jul 16 16:31:20 2021
+Created by          aledjones
+Last modified       Fri Jul 16 16:31:20 2021
+Edit Version        0
+Title               MokaAMP_v1.7
 Summary             
 Output Folder       -
 Input Spec          stage-FPzGj5j0jy1x97jg607Fg229:
@@ -154,6 +154,7 @@ Input Spec          stage-FPzGj5j0jy1x97jg607Fg229:
                   default=true)]
                     [stage-FPzGjp80jy1V3Jvb5z6xfpfZ.variants (boolean,
                   default=true)]
+                    [stage-FPzGjp80jy1V3Jvb5z6xfpfZ.samplename (string)]
                 stage-FPzGjJQ0jy1fF6505zFP6zz9:
                     [stage-FPzGjJQ0jy1fF6505zFP6zz9.BAM_in (file,
                   default={"$dnanexus_link": {"outputField":
@@ -270,6 +271,6 @@ Stage 6             stage-FPzGjfQ0jy1y01vG60K22qG1
 Stage 7             stage-G0vKZk80GfYkQx86PJGGjz9Y
   Executable        applet-G0qjpy00GfYyKPZ34xXYpg36
 Stage 8             stage-FPzGjp80jy1V3Jvb5z6xfpfZ
-  Executable        applet-G1fvfP00jy1V7Kx2B5K79zvF
+  Executable        applet-G3jZBqQ0jy1Xy27V3Gpzjgx8
 Stage 9             stage-FxypXb807p1zj3g8Jv45Y54P
   Executable        applet-Fxyp8z00jy1Y9F64465Jq1b4
