@@ -17,3 +17,6 @@ New versions include Genome Ref in VCF header to allow upload and processing by 
 
 ## v1.7
 replaced varscan v1.7.1 with v1.7.2 which allows for samplename to be given as a input
+
+## v2.0
+This is an update from v1.6. BAMclipper has been replaced by ampliconfilter. an obsolete version of varscan is used (v1.7.1) so this workflow will be immediately superceeded by v2.1.

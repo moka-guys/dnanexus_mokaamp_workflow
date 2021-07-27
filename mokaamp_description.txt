@@ -1,20 +1,20 @@
 Result 1:
-ID                  workflow-G3jpGX00jy1zb80G9bzVZ6Z9
+ID                  workflow-G34GP9Q0jy1kv0qf0KP3kzY2
 Class               workflow
 Project             project-ByfFPz00jy1fk6PjpZ95F27J
 Folder              /Workflows
-Name                MokaAMP_v1.7
+Name                MokaAMP_v2.0
 State               open
 Visibility          visible
 Types               -
-Properties          github release=v1.7
+Properties          github release=v2.0
 Tags                -
 Outgoing links      -
-Created             Fri Jul 16 16:31:20 2021
+Created             Tue Jun 15 16:30:46 2021
 Created by          aledjones
-Last modified       Fri Jul 16 16:31:20 2021
-Edit Version        0
-Title               MokaAMP_v1.7
+Last modified       Fri Jul 16 15:58:36 2021
+Edit Version        70
+Title               MokaAMP_v2.0
 Summary             
 Output Folder       -
 Input Spec          stage-FPzGj5j0jy1x97jg607Fg229:
@@ -51,11 +51,13 @@ Input Spec          stage-FPzGj5j0jy1x97jg607Fg229:
                   "bam_file", "stage":
                   "stage-G0vKZk80GfYkQx86PJGGjz9Y"}}])]
                     [stage-FPzGjp80jy1V3Jvb5z6xfpfZ.bed_file (file,
-                  default={"$dnanexus_link":
-                  "file-FQ2QQyj0jy1kzK7k5ZfX9z7P"})]
+                  default={"$dnanexus_link": {"inputField":
+                  "bedfile", "stage":
+                  "stage-G0vKZk80GfYkQx86PJGGjz9Y"}})]
                     [stage-FPzGjp80jy1V3Jvb5z6xfpfZ.ref_genome (file,
-                  default={"$dnanexus_link":
-                  "file-ByYgX700b80gf4ZY1GxvF3Jv"})]
+                  default={"$dnanexus_link": {"inputField":
+                  "ref_genome", "stage":
+                  "stage-G0vKZk80GfYkQx86PJGGjz9Y"}})]
                 stage-FPzGjF00jy1VkK485zX600kx:
                     [stage-FPzGjF00jy1VkK485zX600kx.sorted_bam (file,
                   default={"$dnanexus_link": {"outputField":
@@ -87,16 +89,14 @@ Input Spec          stage-FPzGj5j0jy1x97jg607Fg229:
                   (file, default={"$dnanexus_link":
                   "file-Fggy15j0jy1pJGkB98kGBgXk"})]
                 stage-FPzGjfQ0jy1y01vG60K22qG1:
-                    [stage-FPzGjfQ0jy1y01vG60K22qG1.sambamba_bed (file,
-                  default={"$dnanexus_link":
-                  "file-FQ2QQyj0jy1k1Z6G18jPXpJ8"})]
+                    stage-FPzGjfQ0jy1y01vG60K22qG1.sambamba_bed (file)
                     [stage-FPzGjfQ0jy1y01vG60K22qG1.bamfile (file,
                   default={"$dnanexus_link": {"outputField":
-                  "clipped_bam", "stage":
+                  "clipped_BAM", "stage":
                   "stage-FPzGjJQ0jy1fF6505zFP6zz9"}})]
                     [stage-FPzGjfQ0jy1y01vG60K22qG1.bam_index (file,
                   default={"$dnanexus_link": {"outputField":
-                  "clipped_bai", "stage":
+                  "clipped_BAM_BAI", "stage":
                   "stage-FPzGjJQ0jy1fF6505zFP6zz9"}})]
                 [stage-FPzGjfQ0jy1y01vG60K22qG1.merge_overlapping_mate_reads
                   (boolean, default=true)]
@@ -154,17 +154,23 @@ Input Spec          stage-FPzGj5j0jy1x97jg607Fg229:
                   default=true)]
                     [stage-FPzGjp80jy1V3Jvb5z6xfpfZ.variants (boolean,
                   default=true)]
-                    [stage-FPzGjp80jy1V3Jvb5z6xfpfZ.samplename (string)]
                 stage-FPzGjJQ0jy1fF6505zFP6zz9:
-                    [stage-FPzGjJQ0jy1fF6505zFP6zz9.BAM_in (file,
+                    [stage-FPzGjJQ0jy1fF6505zFP6zz9.BAM (file,
                   default={"$dnanexus_link": {"outputField":
                   "bam", "stage":
                   "stage-FPzGjF00jy1VkK485zX600kx"}})]
-                    [stage-FPzGjJQ0jy1fF6505zFP6zz9.upstream (string)]
-                    [stage-FPzGjJQ0jy1fF6505zFP6zz9.downstream (string)]
-                    [stage-FPzGjJQ0jy1fF6505zFP6zz9.primers (file,
-                  default={"$dnanexus_link":
-                  "file-FQ2QQyj0jy1k1Z6G18jPXpJ8"})]
+                    stage-FPzGjJQ0jy1fF6505zFP6zz9.BEDPE (file)
+                    [stage-FPzGjJQ0jy1fF6505zFP6zz9.clipping (string,
+                  default="1")]
+                    [stage-FPzGjJQ0jy1fF6505zFP6zz9.super (boolean,
+                  default=true)]
+                    [stage-FPzGjJQ0jy1fF6505zFP6zz9.mask (boolean,
+                  default=false)]
+                    [stage-FPzGjJQ0jy1fF6505zFP6zz9.primerdistance (string)]
+                    [stage-FPzGjJQ0jy1fF6505zFP6zz9.tolerance (string)]
+                    [stage-FPzGjJQ0jy1fF6505zFP6zz9.maxbuffer (string,
+                  default="10000000")]
+                    [stage-FPzGjJQ0jy1fF6505zFP6zz9.extratrim (string)]
                 stage-FPzGj6Q0jy1fF6505zFP6zz5: Advanced:
                     [stage-FPzGj6Q0jy1fF6505zFP6zz5.format (string,
                   default="auto")]
@@ -193,11 +199,9 @@ Input Spec          stage-FPzGj5j0jy1x97jg607Fg229:
                 stage-G0vKZk80GfYkQx86PJGGjz9Y:
                     [stage-G0vKZk80GfYkQx86PJGGjz9Y.bam_file (array:file,
                   default=[{"$dnanexus_link":
-                  {"outputField": "clipped_bam", "stage":
+                  {"outputField": "clipped_BAM", "stage":
                   "stage-FPzGjJQ0jy1fF6505zFP6zz9"}}])]
-                    [stage-G0vKZk80GfYkQx86PJGGjz9Y.bedfile (file,
-                  default={"$dnanexus_link":
-                  "file-FQ2QQyj0jy1kzK7k5ZfX9z7P"})]
+                    stage-G0vKZk80GfYkQx86PJGGjz9Y.bedfile (file)
                     [stage-G0vKZk80GfYkQx86PJGGjz9Y.ref_genome (file,
                   default={"$dnanexus_link":
                   "file-ByYgX700b80gf4ZY1GxvF3Jv"})]
@@ -231,8 +235,11 @@ Output Spec         stage-FPzGjF00jy1VkK485zX600kx:
                     stage-FPzGj6Q0jy1fF6505zFP6zz5.report_html (file)
                     stage-FPzGj6Q0jy1fF6505zFP6zz5.stats_txt (file)
                 stage-FPzGjJQ0jy1fF6505zFP6zz9:
-                    stage-FPzGjJQ0jy1fF6505zFP6zz9.clipped_bam (file)
-                    stage-FPzGjJQ0jy1fF6505zFP6zz9.clipped_bai (file)
+                    stage-FPzGjJQ0jy1fF6505zFP6zz9.clipped_BAM (file)
+                    stage-FPzGjJQ0jy1fF6505zFP6zz9.clipped_BAM_BAI (file)
+                    stage-FPzGjJQ0jy1fF6505zFP6zz9.discarded_BAM (file)
+                    stage-FPzGjJQ0jy1fF6505zFP6zz9.discarded_BAM_BAI (file)
+                    stage-FPzGjJQ0jy1fF6505zFP6zz9.metrics (file)
                 stage-FPzGjV80jy1x97jg607Fg22b:
                     stage-FPzGjV80jy1x97jg607Fg22b.moka_picard_stats
                   (array:file)
@@ -265,12 +272,13 @@ Stage 3             stage-FPzGjF00jy1VkK485zX600kx
 Stage 4             stage-FPzGjV80jy1x97jg607Fg22b
   Executable        applet-FPv2Q1Q0jy1pBk9bG7GZ5zQp
 Stage 5             stage-FPzGjJQ0jy1fF6505zFP6zz9
-  Executable        applet-FPxyBJQ0jy1kfygjBQpz7qFb
+  Executable        applet-G07QvPj0jy1g23Vk81x1Bk1B
 Stage 6             stage-FPzGjfQ0jy1y01vG60K22qG1
-  Executable        applet-FVf1Kx00jy1fjpyY64fvJvpq
+  Executable        applet-Fk6YKfj0jy1yKj3K58QbJB0z
 Stage 7             stage-G0vKZk80GfYkQx86PJGGjz9Y
   Executable        applet-G0qjpy00GfYyKPZ34xXYpg36
 Stage 8             stage-FPzGjp80jy1V3Jvb5z6xfpfZ
-  Executable        applet-G3jZBqQ0jy1Xy27V3Gpzjgx8
+  Executable        applet-G1fvfP00jy1V7Kx2B5K79zvF
 Stage 9             stage-FxypXb807p1zj3g8Jv45Y54P
   Executable        applet-Fxyp8z00jy1Y9F64465Jq1b4
+initializedFrom     workflow-G1gV4880jy1X9jvP3kv647Yq
