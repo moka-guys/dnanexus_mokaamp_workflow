@@ -23,3 +23,6 @@ This is an update from v1.6. BAMclipper has been replaced by ampliconfilter. an 
 
 ## v2.1
 Varscan updated to v1.7.2 from an obselete version (v1.7.1).
+
+## v2.2
+Ampliconfilter app updated to v1.1. [applies ampliconfilter v1.0.1](https://github.com/moka-guys/ampliconfilter/tree/v1.0.1_release)

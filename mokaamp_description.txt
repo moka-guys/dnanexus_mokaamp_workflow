@@ -1,20 +1,20 @@
 Result 1:
-ID                  workflow-G50pPF80jy1y2BxF4gzZf0jg
+ID                  workflow-G5Q1yfQ0P6gpBKxZ30zZqxGv
 Class               workflow
-Project             project-ByfFPz00jy1fk6PjpZ95F27J
-Folder              /Workflows
-Name                MokaAMP_v2.1
+Project             project-G5Q1yF80P6gx8XP4J48ypYb1
+Folder              /
+Name                MokaAMP_v2.2
 State               open
 Visibility          visible
 Types               -
-Properties          github release=v2.1
+Properties          -
 Tags                -
 Outgoing links      -
-Created             Wed Sep 15 08:58:37 2021
+Created             Fri Oct  8 11:37:14 2021
 Created by          aledjones
-Last modified       Wed Sep 15 09:24:13 2021
-Edit Version        16
-Title               MokaAMP_v2.1
+Last modified       Fri Oct  8 17:19:10 2021
+Edit Version        8
+Title               MokaAMP_v2.2
 Summary             
 Output Folder       -
 Input Spec          stage-FPzGj5j0jy1x97jg607Fg229:
@@ -273,7 +273,7 @@ Stage 3             stage-FPzGjF00jy1VkK485zX600kx
 Stage 4             stage-FPzGjV80jy1x97jg607Fg22b
   Executable        applet-FPv2Q1Q0jy1pBk9bG7GZ5zQp
 Stage 5             stage-FPzGjJQ0jy1fF6505zFP6zz9
-  Executable        applet-G07QvPj0jy1g23Vk81x1Bk1B
+  Executable        applet-G5Q68G80jy1g3vyjFg04pVJ6
 Stage 6             stage-FPzGjfQ0jy1y01vG60K22qG1
   Executable        applet-Fk6YKfj0jy1yKj3K58QbJB0z
 Stage 7             stage-G0vKZk80GfYkQx86PJGGjz9Y
@@ -282,4 +282,3 @@ Stage 8             stage-FPzGjp80jy1V3Jvb5z6xfpfZ
   Executable        applet-G3jZBqQ0jy1Xy27V3Gpzjgx8
 Stage 9             stage-FxypXb807p1zj3g8Jv45Y54P
   Executable        applet-Fxyp8z00jy1Y9F64465Jq1b4
-initializedFrom     workflow-G34GP9Q0jy1kv0qf0KP3kzY2
